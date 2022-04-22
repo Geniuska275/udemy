@@ -4,7 +4,7 @@ const app=express();
 app.set('view engine','ejs');
 app.use(express.static("public"));
 
-const port=2000
+const port=process.env.PORT || 2000;
 
 app.get("/",(req,res)=>{
     res.render("udemy");
